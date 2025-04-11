@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>選單與畫布</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="sketch.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- 選單 -->
+    <ul>
+      <li onclick="hideIframe()">首頁</li>
+      <li>自我介紹</li>
+      <li>
+        作品集
+        <ul class="submenu">
+          <li onclick="showIframe('https://jerriiii.github.io/20250221/')">第一周</li>
+          <li onclick="showIframe('https://jerriiii.github.io/20250307/')">第二周</li>
+          <li onclick="showIframe('https://jerriiii.github.io/20250328/')">第三周</li>
+         
+        </ul>
+      </li>
+      <li>測驗卷</li>
+      <li>教學影片</li>
+    </ul>
+
+    <!-- iframe -->
+    <div id="iframe-container">
+      <iframe id="content-frame" src="" frameborder="0"></iframe>
+    </div>
+  </body>
+</html>

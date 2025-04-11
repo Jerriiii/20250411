@@ -1,0 +1,89 @@
+/* css主要設定網頁html的格式設定 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* 最底層 */
+}
+
+/* 選單樣式 */
+ul {
+  list-style: none; /* 移除預設的項目符號 */
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex; /* 將選單項目排列在同一行 */
+  gap: 20px; /* 項目之間的間距 */
+  background-color: #766153; /* 選單背景顏色 */
+  padding: 10px 20px; /* 增加內邊距 */
+  border-radius: 5px; /* 圓角效果 */
+  z-index: 2; /* 最上層 */
+}
+
+ul li {
+  font-size: 30px; /* 文字大小 */
+  font-family: "微軟正黑體", Arial, sans-serif; /* 文字字形 */
+  color: #f5dfbb; /* 文字顏色 */
+  cursor: pointer; /* 滑鼠移動到項目上時顯示指標 */
+  position: relative;
+}
+
+ul li:hover {
+  color: #0582ca; /* 滑鼠移動到項目上時的文字顏色 */
+}
+
+/* 子選單樣式 */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #766153;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 3;
+}
+
+ul li:hover .submenu {
+  display: flex;
+}
+
+.submenu li {
+  font-size: 20px;
+  color: #f5dfbb;
+}
+
+.submenu li:hover {
+  color: #0582ca;
+}
+
+/* iframe 容器樣式 */
+#iframe-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.2); /* 背景透明度 */
+  z-index: 1; /* 第二層 */
+  display: none; /* 預設隱藏 */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
